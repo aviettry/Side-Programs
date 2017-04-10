@@ -60,6 +60,11 @@ compoundedMonthly( double deposit, double rate, float time ) {
   return savings;
 }
 
+double
+compoundedAnnually( double deposit, double rate, float time ) {
+
+}
+
 int 
 main( int argc, char* argv[] ) {
   if( argc < NUM_ARGUMENTS ) {
