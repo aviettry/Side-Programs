@@ -1,3 +1,11 @@
 import random
-userInput = 
-print("Select random element from list - ", random.choice(city_list))
+import sys
+
+#parse_engine(self.input)
+
+self.input = self.content.split("\n")
+self.userInput = [self.word]
+
+print(random.choice(userInput))
+
+
