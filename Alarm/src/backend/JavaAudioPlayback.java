@@ -80,16 +80,20 @@ public class JavaAudioPlayback {
 	 */
 	public static void main(String[] args) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
 
-		JavaAudioPlayback player = new JavaAudioPlayback();
+		long interval = Long.parseLong(JOptionPane.showInputDialog("Enter your interval in minutes:"));
+		if( (interval < 1) || (interval > 120) ) {
+			JOptionPane.showMessageDialog(null, interval + " is an invalid interval.\nValid range: [1, 120]");
+			System.exit(0);
+		}
 		
-
+		JavaAudioPlayback player = new JavaAudioPlayback();
 		ScheduledThreadPoolExecutor scheduler = new ScheduledThreadPoolExecutor(1);
 		ScheduledFuture<?> schedule = scheduler.scheduleAtFixedRate(new Runnable() {
 			@Override
 			public void run() {
 				player.Run();
 			}
-		}, 0, 10, TimeUnit.MINUTES);
+		}, 0, interval , TimeUnit.MINUTES);
 		
 		JOptionPane.showMessageDialog(null, "Close to end program.");
 		schedule.cancel(true);
