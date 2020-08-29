@@ -1,18 +1,25 @@
 package backend;
 
+import java.io.FileNotFoundException;
+
+import info.viettry.StringUtil;
+
 /**
  * A player is a competitor for the team. To play for the team, the player will
  * be added to a team's entry.
  */
-public class Player {
+public class Player extends StringUtil {
 	private String name;
 
 	/**
 	 * Creates a player with the name.
 	 * 
 	 * @param name The name of the player.
+	 * @throws FileNotFoundException 
 	 */
-	public Player(String name) {
+	public Player(String name) throws InstantiationException {
+		if( (name == null) || (name == "") || !isAlpha(name))
+			throw new InstantiationException("Error: Player name must be alpha characters only.");
 		this.name = name;
 	}
 
