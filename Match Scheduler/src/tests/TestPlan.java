@@ -11,11 +11,11 @@ import org.junit.platform.launcher.listeners.TestExecutionSummary;
 import static org.junit.platform.engine.discovery.ClassNameFilter.includeClassNamePatterns;
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectPackage;
 
-public class SmokeTest {
+public class TestPlan {
 	SummaryGeneratingListener listener = new SummaryGeneratingListener();
 
 	public static void main(String[] args) {
-		SmokeTest runner = new SmokeTest();
+		TestPlan runner = new TestPlan();
 		runner.runAll();
 
 		TestExecutionSummary summary = runner.listener.getSummary();

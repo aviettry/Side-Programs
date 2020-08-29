@@ -78,7 +78,7 @@ public class Interval {
 	 * @return          The number of matches that have a player in both
 	 *                  intervals.
 	 */
-	public int compare(Interval interval) {
+	public int conflicts(Interval interval) {
 		int conflicts = 0;
 		for (Match match : this.matches) {
 			for (Match nextMatch : interval.matches) {

@@ -1,12 +1,14 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import backend.Entry;
 import backend.Player;
+
 
 public class EntryTest {
 	static Player Ali, aLI, Jamie, Jim;
