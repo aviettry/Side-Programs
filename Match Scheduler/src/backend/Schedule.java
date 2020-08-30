@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class Schedule {
 	private ArrayList<Interval> schedule = new ArrayList<>();
+	private final int NUMBER_OF_COURTS;
 	
-	public Schedule() {
-		
+	public Schedule(int numCourts) {
+		NUMBER_OF_COURTS = numCourts;
 	}
 	
 	public int last() {

@@ -9,20 +9,11 @@
 			</Console>
 		</Appender>
 
-		<Appender>
-			<RollingFile name="Logger"
-				fileName="${log-path}CMSAutomation.${date:yyyy-MM-dd_hh-mm-ss}.log"
-				filePattern="${log-path}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
-				<PatternLayout>
-					<Pattern>%highlight{%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n}</Pattern>
-				</PatternLayout>
-			</RollingFile>
-		</Appender>
+		
 
 	</Appenders>
 
 	<Root level="debug">
 		<AppenderRef ref="STDOUT" />
-		<AppenderRef ref="Logger" />
 	</Root>
 </Configuration>
