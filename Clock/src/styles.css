@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #99FF66; /* Bright yellow for better visibility for elderly */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    transition: background-color 30s linear;
+}
+
+#time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+#clock {
+    font-size: 20vw; /* Much larger font size */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+/* Remaining styles omitted for brevity */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #99FF66; /* Bright yellow for better visibility for elderly */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    transition: background-color 30s linear;
+}
+
+#time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+#clock {
+    font-size: 20vw; /* Much larger font size */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+#date {
+    font-size: 10vw; /* 50% of clock's 20vw */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: #99FF66;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    margin-top: 0; /* Reset the negative margin */
+    letter-spacing: 1vw; /* Add letter spacing to match header alignment */
+}
+
+#day {
+    font-size: 10vw; /* Same size as date */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: #99FF66;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    margin-top: -1vw; /* Negative margin to bring it closer to the date */
+}
+
+#date-header {
+    font-size: 10vw; /* Same size as date now */
+    text-align: center;
+    width: 100%;
+    color: #99FF66; /* Updated for better consistency */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    margin-top: 1vw; /* Add some space from the time */
+    margin-bottom: 2vw; /* Add more space before the date */
+    letter-spacing: 3vw; /* Space out the characters to align with date format */
+    padding-left: 1.5vw; /* Offset for the letter spacing */
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 3s linear;
+    overflow: hidden;
+}
+
+#sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,190,1) 0%, rgba(255,215,0,1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 100px 50px rgba(255, 255, 0, 0.4);
+    transition: all 3s linear;
+    z-index: 2;
+}
+
+#moon {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(230,230,230,1) 0%, rgba(200,200,200,1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 60px 30px rgba(200, 200, 255, 0.4);
+    transition: all 3s linear;
+    z-index: 2;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.star.bright {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.3);
+}
+
+#debug-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+#debug-button.active {
+    background-color: rgba(255, 0, 0, 0.5);
+}
