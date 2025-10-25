@@ -4,10 +4,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #99FF66; /* Bright yellow for better visibility for elderly */
+    color: #99FF66;
     font-family: Arial, sans-serif;
     overflow: hidden;
     transition: background-color 30s linear;
+    text-shadow: 12px 12px 24px rgba(0, 0, 0, 0.8);
 }
 
 #time-container {
@@ -25,7 +26,6 @@ body {
     text-align: center;
     width: 100%;
     line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
 }
@@ -58,7 +58,6 @@ body {
     text-align: center;
     width: 100%;
     line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
 }
@@ -69,7 +68,6 @@ body {
     text-align: center;
     width: 100%;
     color: #99FF66;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
     margin-top: 0; /* Reset the negative margin */
@@ -82,7 +80,6 @@ body {
     text-align: center;
     width: 100%;
     color: #99FF66;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
     margin-top: -1vw; /* Negative margin to bring it closer to the date */
@@ -93,7 +90,6 @@ body {
     text-align: center;
     width: 100%;
     color: #99FF66; /* Updated for better consistency */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
     margin-top: 1vw; /* Add some space from the time */
