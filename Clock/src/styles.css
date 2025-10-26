@@ -28,6 +28,7 @@ body {
     line-height: 1;
     position: relative;
     z-index: 10;
+    padding-top: 50px; /* Added top padding */
 }
 
 /* Remaining styles omitted for brevity */
@@ -83,6 +84,7 @@ body {
     position: relative;
     z-index: 10;
     margin-top: -1vw; /* Negative margin to bring it closer to the date */
+    padding-bottom: 50px; /* Added bottom padding as requested */
 }
 
 #date-header {
@@ -150,7 +152,7 @@ body {
 
 #debug-button {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
